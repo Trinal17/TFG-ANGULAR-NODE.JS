@@ -1,6 +1,3 @@
-# PROYECTO-TFG-ANGULAR-NODE.JS
-TFG Francisco Javier Belda
-
 # 💊 Sistema de Gestión Web para Farmacéuticas
 
 ## 📌 Descripción del proyecto
@@ -185,5 +182,3 @@ Este proyecto demuestra el desarrollo completo de una **aplicación web profesio
 📅 Junio 2025
 
 ---
-
-⭐ Si este proyecto te resulta útil o interesante, ¡no dudes en darle una estrella en GitHub!
