@@ -1,0 +1,65 @@
+<div class="container py-4 d-flex justify-content-center">
+  <div class="card shadow w-100" style="max-width: 600px;">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Nuevo Pedido</h2>
+
+      @if (error()) {
+        <div class="alert alert-danger">{{ error() }}</div>
+      }
+
+      <form (submit)="submit(); $event.preventDefault()">
+        
+
+        <div class="mb-3">
+          <label class="form-label">Nombre del Medicamento*</label>
+          <input
+            type="text"
+            class="form-control"
+            [value]="nombreMedicamento()"
+            (input)="nombreMedicamento.set($any($event.target).value)"
+            required
+            pattern="^[A-Z]{1}.*"
+            title="El nombre del medicamento debe comenzar con una letra mayúscula"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Cantidad Pedida*</label>
+          <input
+            type="number"
+            class="form-control"
+            [value]="cantidadPedida() ?? ''"
+            (input)="cantidadPedida.set($any($event.target).valueAsNumber)"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Proveedor*</label>
+          <select
+            class="form-select"
+            [value]="proveedorCodigo()"
+            (change)="proveedorCodigo.set($any($event.target).value)"
+            required
+          >
+            <option value="" disabled>-- Selecciona un proveedor --</option>
+            @for (p of proveedores(); track p._id) {
+              <option [value]="p.codigo">{{ p.nombre }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-success me-2">Crear</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="router.navigate(['/pedidos'])"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

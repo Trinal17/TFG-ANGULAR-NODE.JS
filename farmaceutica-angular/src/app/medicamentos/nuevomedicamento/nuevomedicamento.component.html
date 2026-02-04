@@ -1,0 +1,88 @@
+<!-- src/app/nuevo-medicamento/nuevo-medicamento.component.html -->
+<div class="container py-4 d-flex justify-content-center">
+    <div class="card shadow w-100" style="max-width: 800px;">
+      <div class="card-body">
+        <h2 class="card-title mb-4">Crear nuevo Medicamento</h2>
+  
+        @if (errorMessage()) {
+          <div class="alert alert-danger">{{ errorMessage() }}</div>
+        }
+  
+        <form (submit)="submit(); $event.preventDefault()">
+          <div class="mb-3">
+            <label class="form-label">Nombre*</label>
+            <input
+              type="text"
+              class="form-control"
+              [value]="nombre()"
+              (input)="nombre.set($any($event.target).value)"
+              required
+            />
+          </div>
+  
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Ubicación*</label>
+              <input
+                type="text"
+                class="form-control"
+                [value]="ubicacion()"
+                (input)="ubicacion.set($any($event.target).value)"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Tipo*</label>
+              <input
+                type="text"
+                class="form-control"
+                [value]="tipo()"
+                (input)="tipo.set($any($event.target).value)"
+                required
+              />
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label class="form-label">Descripción</label>
+            <textarea
+              class="form-control"
+              rows="3"
+              [value]="descripcion()"
+              (input)="descripcion.set($any($event.target).value)"
+            ></textarea>
+          </div>
+  
+          <div class="mb-4">
+            <label class="form-label">Ingredientes</label><br>
+            @for (item of ingredientesIndexed(); track item.idx) {
+              <div class="input-group mb-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  [value]="item.valor"
+                  (input)="updateIngrediente(item.idx, $any($event.target).value)"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-danger"
+                  (click)="removeIngrediente(item.idx)"
+                >&times;</button>
+              </div>
+            }
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-primary"
+              (click)="addIngrediente()"
+            >+ Añadir ingrediente</button>
+          </div>
+          
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-success me-2">Crear</button>
+            <a class="btn btn-secondary" href="/medicamentos">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

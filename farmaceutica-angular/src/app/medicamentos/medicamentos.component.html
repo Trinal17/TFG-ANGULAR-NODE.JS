@@ -1,0 +1,111 @@
+<div class="container d-flex flex-column" style="min-height: 600px;">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0">Medicamentos</h2>
+    <div class="d-flex gap-2">
+      <button class="btn btn-secondary" (click)="exportPdf()">
+        📄 Exportar PDF
+      </button>
+      @if (auth.getUser()?.['rol'] === 'Gerente') {
+      <button class="btn btn-success" (click)="goToNuevo()">
+        + Crear Medicamento
+      </button>
+      }
+    </div>
+  </div>
+
+  @if (lowStockWarning()) {
+  <div class="alert alert-danger">
+    {{ lowStockWarning() }}
+  </div>
+  }
+
+  <!-- FILTROS -->
+  <div class="row g-2 mb-3">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Filtrar por nombre..." [value]="filterName()"
+        (input)="onNameFilter($any($event.target).value)" />
+    </div>
+    <div class="col-md-4">
+      <select class="form-select" [value]="filterType()" (change)="onTypeFilter($any($event.target).value)">
+        <option value="">-- Filtrar por tipo --</option>
+        @for (t of tipos(); track t) {
+        <option [value]="t">{{ t }}</option>
+        }
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-outline-secondary w-100" (click)="onNameFilter(''); onTypeFilter('')">
+        Limpiar
+      </button>
+    </div>
+  </div>
+
+
+
+  <div class="d-flex flex-column flex-grow-1">
+    <div class="table-responsive flex-grow-1">
+      <table class="table table-striped table-bordered mb-0">
+        <thead class="table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Ubicación</th>
+            <th>Tipo</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (med of pagedMedicamentos(); track med._id) {
+          <tr>
+            <td>{{ med.nombre }}</td>
+            <td>{{ med.ubicacion }}</td>
+            <td>{{ med.tipo }}</td>
+            @if(med.cantidad <= med.stock_minimo) { <td class='text-danger fw-bold'>{{ med.cantidad }}</td>
+              } @else {
+              <td>{{ med.cantidad }}</td>
+              }
+              <td>
+                <button class="btn btn-warning btn-sm me-2" (click)="openUpdateModal(med)" data-bs-toggle="modal"
+                  data-bs-target="#updateModal">
+                  Actualizar
+                </button>
+                <button class="btn btn-secondary btn-sm me-2" (click)="goToDetails(med._id)">
+                  Detalles
+                </button>
+                @if (auth.getUser()?.['rol'] === 'Gerente') {
+                <button class="btn btn-danger btn-sm" (click)="deleteMedicamento(med._id)">
+                  Borrar
+                </button>
+                }
+              </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Modal de actualización -->
+    <app-minimedicamento [medicamento]="selectedMedicamento()" (onClose)="closeModal()"
+      (onUpdate)="actualizarMedicamentoActualizado($event)"></app-minimedicamento>
+  </div>
+
+  <!-- Paginación fija abajo -->
+  <nav class="mt-1">
+    <ul class="pagination justify-content-center mb-0">
+      <li class="page-item" [class.disabled]="currentPage() === 1">
+        <button class="page-link" (click)="prevPage()">Anterior</button>
+      </li>
+      @for (pg of pages(); track pg) {
+      <li class="page-item" [class.active]="pg === currentPage()">
+        <button class="page-link" (click)="goToPage(pg)">{{ pg }}</button>
+      </li>
+      }
+      <li class="page-item" [class.disabled]="currentPage() === totalPages()">
+        <button class="page-link" (click)="nextPage()">Siguiente</button>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="m-2">
+  <button class="btn btn-primary" routerLink="/">Volver</button>
+</div>

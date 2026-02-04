@@ -1,0 +1,78 @@
+<!-- src/app/header/header.component.html -->
+<header class="bg-success">
+  <div class="container-fluid d-flex justify-content-between align-items-center py-2">
+
+    <!-- Logo a la izquierda -->
+    <a class="navbar-brand d-flex align-items-center text-white" href="/">
+      <img
+        src="assets/imagenes/logo_farmaceutica.png"
+        alt="Logo Farmacéutica"
+        width="50"
+        height="50"
+        class="me-2"
+      >
+      <span class="fs-5">Farma</span>
+    </a>
+
+    <!-- Usuario a la derecha: el <span> abre el offcanvas al hacer clic -->
+    @if (authStorage.isUserLoggedIn()) {
+      <div class="d-flex align-items-center">
+        <span
+          class="text-white me-3"
+          role="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasUserMenu"
+          aria-controls="offcanvasUserMenu"
+        >
+          {{ authStorage.getUser()?.['correo'] }}
+        </span>
+      </div>
+    }
+
+  </div>
+
+  <!-- Offcanvas panel -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasUserMenu"
+  aria-labelledby="offcanvasUserMenuLabel"
+>
+  <div class="offcanvas-header bg-success text-white" style="height: 66px;">
+    <h5 id="offcanvasUserMenuLabel" class="offcanvas-title">Perfil</h5>
+    <button
+      type="button"
+      class="btn-close btn-close-white"
+      data-bs-dismiss="offcanvas"
+      aria-label="Cerrar"
+    ></button>
+  </div>
+
+  <div class="offcanvas-body d-flex flex-column gap-3">
+    <!-- Botón de configuración -->
+    <button
+      class="btn btn-primary d-flex align-items-center"
+      data-bs-dismiss="offcanvas"
+      [routerLink]="['/perfil']"
+    >
+      <i class="bi bi-gear-fill fs-4 me-2"></i>
+      <span class="fw-semibold">Configuración</span>
+    </button>
+
+    <!-- Botón de cerrar sesión -->
+    <button
+      class="btn btn-danger d-flex align-items-center"
+      data-bs-dismiss="offcanvas"
+      (click)="logout()"
+    >
+      <i class="bi bi-box-arrow-right fs-4 me-2"></i>
+      <span class="fw-semibold">Cerrar Sesión</span>
+    </button>
+  </div>
+  <div class="offcanvas-header bg-success" style="height: 88px;">
+  </div>
+</div>
+
+
+
+</header>

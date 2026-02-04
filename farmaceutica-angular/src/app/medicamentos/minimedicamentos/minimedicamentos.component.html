@@ -1,0 +1,49 @@
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="updateModalLabel">Actualizar {{ medicamento?.nombre }}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="mb-3">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Número (4=venta, 6=pedido)"
+            [value]="numeroPedido() ?? ''"
+            (input)="numeroPedido.set($any($event.target).valueAsNumber)"
+          />
+        </div>
+        @if (isValido()) {
+          <div class="mb-3">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Cantidad a procesar"
+              [value]="cantidad() ?? ''"
+              (input)="cantidad.set($any($event.target).valueAsNumber)"
+            />
+          </div>
+        }
+        @if (errorMessage()) {
+          <div class="alert alert-danger">{{ errorMessage() }}</div>
+        }
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onClose.emit()">Cancelar</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="confirmar()"
+        >
+          Confirmar
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

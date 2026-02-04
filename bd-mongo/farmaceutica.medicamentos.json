@@ -1,0 +1,491 @@
+[{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd18"
+  },
+  "nombre": "Ibuprofeno",
+  "ubicacion": "L-4",
+  "cantidad": 20,
+  "tipo": "Antiinflamatorio",
+  "ingredientes": [
+    "Ibuprofeno (200 mg)",
+    "Lactosa monohidrato",
+    "Almidón de maíz",
+    "Celulosa microcristalina",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "El ibuprofeno es un AINE que inhibe la ciclooxigenasa, disminuyendo la síntesis de prostaglandinas para aliviar dolor, inflamación y fiebre.",
+  "pedidos": [
+    {
+      "numero_pedido": "100123",
+      "cantidad_pedida": 50
+    },
+    {
+      "numero_pedido": "100124",
+      "cantidad_pedida": 30
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "2001",
+      "cantidad_vendida": 15
+    },
+    {
+      "numero_receta": "2002",
+      "cantidad_vendida": 10
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd19"
+  },
+  "nombre": "Diclofenaco",
+  "ubicacion": "J-1",
+  "cantidad": 18,
+  "tipo": "Antiinflamatorio",
+  "ingredientes": [
+    "Diclofenaco sódico (50 mg)",
+    "Lactosa monohidrato",
+    "Celulosa microcristalina",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "El diclofenaco es un AINE que inhibe COX-1 y COX-2, reduciendo inflamación y dolor en afecciones musculoesqueléticas.",
+  "pedidos": [
+    {
+      "numero_pedido": "200345",
+      "cantidad_pedida": 60
+    },
+    {
+      "numero_pedido": "200346",
+      "cantidad_pedida": 35
+    },
+    {
+      "numero_pedido": "200347",
+      "cantidad_pedida": 2
+    },
+    {
+      "numero_pedido": "123456",
+      "cantidad_pedida": 3
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "1201",
+      "cantidad_vendida": 20
+    },
+    {
+      "numero_receta": "1202",
+      "cantidad_vendida": 14
+    },
+    {
+      "numero_receta": "1203",
+      "cantidad_vendida": 3
+    },
+    {
+      "numero_receta": "1111",
+      "cantidad_vendida": 2
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd1a"
+  },
+  "nombre": "Naproxeno",
+  "ubicacion": "K-2",
+  "cantidad": 25,
+  "tipo": "Antiinflamatorio",
+  "ingredientes": [
+    "Naproxeno sódico (250 mg)",
+    "Lactosa monohidrato",
+    "Almidón de maíz",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "El naproxeno es un AINE que inhibe la COX, útil para el alivio de dolor inflamatorio y articular.",
+  "pedidos": [
+    {
+      "numero_pedido": "210345",
+      "cantidad_pedida": 70
+    },
+    {
+      "numero_pedido": "210346",
+      "cantidad_pedida": 40
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "1301",
+      "cantidad_vendida": 18
+    },
+    {
+      "numero_receta": "1302",
+      "cantidad_vendida": 12
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd1b"
+  },
+  "nombre": "Paracetamol",
+  "ubicacion": "A-1",
+  "cantidad": 48,
+  "tipo": "Analgesico",
+  "ingredientes": [
+    "Paracetamol (500 mg)",
+    "Povidona",
+    "Celulosa microcristalina",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "El paracetamol es un analgésico y antipirético que actúa en el sistema nervioso central para aliviar dolor leve o moderado y reducir la fiebre.",
+  "pedidos": [
+    {
+      "numero_pedido": "110235",
+      "cantidad_pedida": 100
+    },
+    {
+      "numero_pedido": "110236",
+      "cantidad_pedida": 60
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "3001",
+      "cantidad_vendida": 40
+    },
+    {
+      "numero_receta": "3002",
+      "cantidad_vendida": 25
+    },
+    {
+      "numero_receta": "2693",
+      "cantidad_vendida": 2
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd1c"
+  },
+  "nombre": "Metamizol",
+  "ubicacion": "A-2",
+  "cantidad": 30,
+  "tipo": "Analgesico",
+  "ingredientes": [
+    "Metamizol sódico (575 mg)",
+    "Lactosa monohidrato",
+    "Celulosa microcristalina",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "El metamizol es un analgésico y antipirético que inhibe la síntesis de prostaglandinas, indicado en dolor intenso y fiebre.",
+  "pedidos": [
+    {
+      "numero_pedido": "225345",
+      "cantidad_pedida": 80
+    },
+    {
+      "numero_pedido": "225346",
+      "cantidad_pedida": 55
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "1401",
+      "cantidad_vendida": 35
+    },
+    {
+      "numero_receta": "1402",
+      "cantidad_vendida": 22
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd1d"
+  },
+  "nombre": "Tramadol",
+  "ubicacion": "A-3",
+  "cantidad": 15,
+  "tipo": "Analgesico",
+  "ingredientes": [
+    "Tramadol clorhidrato (50 mg)",
+    "Celulosa microcristalina",
+    "Lactosa monohidrato",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "El tramadol es un analgésico opioide de acción central, indicado para dolor moderado a severo.",
+  "pedidos": [
+    {
+      "numero_pedido": "235345",
+      "cantidad_pedida": 30
+    },
+    {
+      "numero_pedido": "235346",
+      "cantidad_pedida": 20
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "1501",
+      "cantidad_vendida": 12
+    },
+    {
+      "numero_receta": "1502",
+      "cantidad_vendida": 8
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd1e"
+  },
+  "nombre": "Salbutamol",
+  "ubicacion": "G-3",
+  "cantidad": 15,
+  "tipo": "Broncodilatador",
+  "ingredientes": [
+    "Salbutamol (100 mcg/dosis)",
+    "Lactosa monohidrato",
+    "Propilenglicol",
+    "Etanol"
+  ],
+  "descripcion": "El salbutamol es un agonista β2 de acción corta que relaja el músculo liso bronquial, indicado en crisis de asma y EPOC.",
+  "pedidos": [
+    {
+      "numero_pedido": "170891",
+      "cantidad_pedida": 40
+    },
+    {
+      "numero_pedido": "170892",
+      "cantidad_pedida": 25
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "9001",
+      "cantidad_vendida": 18
+    },
+    {
+      "numero_receta": "9002",
+      "cantidad_vendida": 12
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd1f"
+  },
+  "nombre": "Formoterol",
+  "ubicacion": "G-4",
+  "cantidad": 10,
+  "tipo": "Broncodilatador",
+  "ingredientes": [
+    "Formoterol fumarato (12 mcg/dosis)",
+    "Lactosa monohidrato",
+    "Celulosa microcristalina",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "El formoterol es un agonista β2 de larga duración, usado en mantenimiento del asma y EPOC.",
+  "pedidos": [
+    {
+      "numero_pedido": "175345",
+      "cantidad_pedida": 50
+    },
+    {
+      "numero_pedido": "175346",
+      "cantidad_pedida": 30
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "9501",
+      "cantidad_vendida": 22
+    },
+    {
+      "numero_receta": "9502",
+      "cantidad_vendida": 15
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd20"
+  },
+  "nombre": "Ipratropio",
+  "ubicacion": "G-5",
+  "cantidad": 12,
+  "tipo": "Broncodilatador",
+  "ingredientes": [
+    "Bromuro de ipratropio (20 mcg/dosis)",
+    "Lactosa monohidrato",
+    "Celulosa microcristalina",
+    "Propilenglicol"
+  ],
+  "descripcion": "El ipratropio es un anticolinérgico inhalado que provoca broncodilatación, indicado en EPOC y asma.",
+  "pedidos": [
+    {
+      "numero_pedido": "180345",
+      "cantidad_pedida": 35
+    },
+    {
+      "numero_pedido": "180346",
+      "cantidad_pedida": 20
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "9601",
+      "cantidad_vendida": 14
+    },
+    {
+      "numero_receta": "9602",
+      "cantidad_vendida": 9
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd21"
+  },
+  "nombre": "Loratadina",
+  "ubicacion": "F-2",
+  "cantidad": 45,
+  "tipo": "Antihistaminico",
+  "ingredientes": [
+    "Loratadina (10 mg)",
+    "Celulosa microcristalina",
+    "Povidona",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "La loratadina es un antihistamínico H1 de segunda generación, usado en el alivio de síntomas alérgicos como estornudos y urticaria.",
+  "pedidos": [
+    {
+      "numero_pedido": "160789",
+      "cantidad_pedida": 80
+    },
+    {
+      "numero_pedido": "160790",
+      "cantidad_pedida": 50
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "8001",
+      "cantidad_vendida": 32
+    },
+    {
+      "numero_receta": "8002",
+      "cantidad_vendida": 24
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681a2bdbe449b40a7b40fd22"
+  },
+  "nombre": "Cetirizina",
+  "ubicacion": "F-3",
+  "cantidad": 40,
+  "tipo": "Antihistaminico",
+  "ingredientes": [
+    "Cetirizina (10 mg)",
+    "Lactosa monohidrato",
+    "Celulosa microcristalina",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "La cetirizina es un antihistamínico H1 de segunda generación, eficaz en el alivio de síntomas alérgicos.",
+  "pedidos": [
+    {
+      "numero_pedido": "165345",
+      "cantidad_pedida": 75
+    },
+    {
+      "numero_pedido": "165346",
+      "cantidad_pedida": 45
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "8101",
+      "cantidad_vendida": 28
+    },
+    {
+      "numero_receta": "8102",
+      "cantidad_vendida": 18
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "681c6981b630b807571bd5a8"
+  },
+  "nombre": "Aspirina",
+  "cantidad": 40,
+  "ubicacion": "K-4",
+  "tipo": "Analgesico",
+  "ingredientes": [
+    "Ácido acetilsalicílico (300 mg)            ",
+    " Almidón de patata ",
+    "Celulosa microcristalina",
+    " Estearato de magnesio"
+  ],
+  "descripcion": "La aspirina es un analgésico y antipirético que también posee efecto antiplaquetario al inhibir la ciclooxigenasa y la agregación plaquetaria, indicada para dolor leve, fiebre y prevención de eventos trombóticos.",
+  "pedidos": [
+    {
+      "numero_pedido": "479921",
+      "cantidad_pedida": 20
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "1234",
+      "cantidad_vendida": 4
+    }
+  ],
+  "stock_minimo": 15
+},
+{
+  "_id": {
+    "$oid": "683d5dc71304bf58e8107eea"
+  },
+  "nombre": "Amoxicilina",
+  "cantidad": 20,
+  "ubicacion": "G-1",
+  "tipo": "Antibiotico",
+  "ingredientes": [
+    "Amoxicilina (500 mg)",
+    "Lactosa monohidrato",
+    "Almidón de maíz",
+    "Celulosa microcristalina",
+    "Estearato de magnesio"
+  ],
+  "descripcion": "La amoxicilina es un antibiótico β-lactámico que inhibe la síntesis de la pared celular bacteriana al unirse a las proteínas fijadoras de penicilina (PBP), provocando la lisis de bacterias grampositivas y algunas gramnegativas.",
+  "pedidos": [
+    {
+      "numero_pedido": "105261",
+      "cantidad_pedida": 25
+    }
+  ],
+  "ventas": [
+    {
+      "numero_receta": "2946",
+      "cantidad_vendida": 3
+    },
+    {
+      "numero_receta": "4028",
+      "cantidad_vendida": 2
+    }
+  ],
+  "stock_minimo": 15
+}]

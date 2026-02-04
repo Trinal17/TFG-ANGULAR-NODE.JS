@@ -1,0 +1,60 @@
+<div class="container py-4 d-flex justify-content-center">
+    <div class="card shadow w-100" style="max-width: 800px;">
+        <div class="card-body">
+            <h2 class="mb-4">Configuración de Perfil</h2>
+
+            @if (error()) {
+            <div class="alert alert-danger">{{ error() }}</div>
+            }
+            @if (success()) {
+            <div class="alert alert-success">{{ success() }}</div>
+            }
+
+            <form class="form" (submit)="save(); $event.preventDefault()">
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" [value]="nombre()"
+                        (input)="nombre.set($any($event.target).value)" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" [value]="apellidos()"
+                        (input)="apellidos.set($any($event.target).value)" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Correo</label>
+                    <input type="email" class="form-control" [value]="correo()" disabled />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Nueva Contraseña</label>
+                    <input type="password" class="form-control" [value]="password()"
+                        (input)="password.set($any($event.target).value)" placeholder="Deja vacío para no cambiar"
+                        pattern="^(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&*_])[A-Za-z0-9!@#$%&*_]+$" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Rol</label>
+                    <input type="text" class="form-control" [value]="rol()" disabled />
+                </div>
+
+                <!-- Contenedor de botones alineado a la izquierda -->
+                <div class="d-flex justify-content-between">
+                    <!-- Botón Guardar Cambios -->
+                    <button type="submit" class="btn btn-primary">
+                        Guardar Cambios
+                    </button>
+
+                    <!-- Botón Volver -->
+                    <button type="button" class="btn btn-secondary" routerLink="/">
+                        Volver
+                    </button>
+
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

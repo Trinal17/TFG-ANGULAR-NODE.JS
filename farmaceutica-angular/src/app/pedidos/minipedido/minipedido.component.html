@@ -1,0 +1,29 @@
+<div class="modal fade show" style="display:block;" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h5 class="modal-title">
+            Editar Cantidad – Pedido {{ pedido?.numero_pedido }}
+          </h5>
+          <button type="button" class="btn-close" (click)="onClose.emit()"></button>
+        </div>
+  
+        <div class="modal-body">
+          <input
+            type="number"
+            class="form-control"
+            [value]="cantidad() ?? ''"
+            (input)="cantidad.set($any($event.target).valueAsNumber)"
+          />
+        </div>
+  
+        <div class="modal-footer">
+          <button class="btn btn-secondary" (click)="onClose.emit()">Cancelar</button>
+          <button class="btn btn-primary" (click)="save()">Guardar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  

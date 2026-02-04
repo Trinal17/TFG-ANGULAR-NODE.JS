@@ -1,0 +1,82 @@
+<div class="container">
+  <!-- Controles de mes -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <button class="btn btn-outline-primary" (click)="prevMonth()" [disabled]="currentMonth()===0">
+      Anterior
+    </button>
+    <h3>{{ monthNames[currentMonth()] }} 2025</h3>
+    <button class="btn btn-outline-primary" (click)="nextMonth()" [disabled]="currentMonth()===11">
+      Siguiente
+    </button>
+  </div>
+
+  <!-- Tabla -->
+  <div class="table-responsive">
+    <table class="table table-bordered text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Empleado</th>
+          @for(emp of empleados(); track emp._id) {
+          <!-- solo cabecera de días en la primera fila -->
+          <ng-container *ngIf="emp===empleados()[0]">
+            @for(day of daysInMonth(); track day) {
+            <th>{{ day }}</th>
+            }
+          </ng-container>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @for(emp of empleados(); track emp._id) {
+        <tr>
+          <td class="text-center align-middle fw-bold">{{ emp.nombre }} {{ emp.apellidos }}</td>
+            @for(day of daysInMonth(); track day) {
+              <td class="fw-semibold align-middle text-center" (click)="openModal(emp._id, day)" style="cursor:pointer; height: 70px;" [style.backgroundColor]="getBgColor(schedule()[emp._id][currentMonth()][day] || '')">
+                {{ schedule()[emp._id][currentMonth()][day] || '' }}
+              </td>
+            }
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="m-2">
+  <button class="btn btn-primary" routerLink="/">Volver</button>
+</div>
+
+<!-- Modal -->
+@if(showModal()) {
+<div class="modal fade show" tabindex="-1" style="display:block; background:rgba(0,0,0,0.5);">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Asignar Turno</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="turno" id="turnoM" value="M"
+            [checked]="selectedTurno()==='M'" (change)="selectedTurno.set('M')" />
+          <label class="form-check-label" for="turnoM">Mañana</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="turno" id="turnoT" value="T"
+            [checked]="selectedTurno()==='T'" (change)="selectedTurno.set('T')" />
+          <label class="form-check-label" for="turnoT">Tarde</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="turno" id="turnoL" value="L"
+            [checked]="selectedTurno()==='L'" (change)="selectedTurno.set('L')" />
+          <label class="form-check-label" for="turnoL">Libranza</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="closeModal()">Cancelar</button>
+        <button class="btn btn-primary" (click)="submitModal()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+}

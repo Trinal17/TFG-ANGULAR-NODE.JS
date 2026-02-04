@@ -1,0 +1,216 @@
+[{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea89"
+  },
+  "numero_pedido": "100123",
+  "nombre_medicamento": "Ibuprofeno",
+  "cantidad_pedida": 50,
+  "codigo_proveedor": "PFZ"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea8a"
+  },
+  "numero_pedido": "100124",
+  "nombre_medicamento": "Ibuprofeno",
+  "cantidad_pedida": 30,
+  "codigo_proveedor": "PFZ"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea8b"
+  },
+  "numero_pedido": "200345",
+  "nombre_medicamento": "Diclofenaco",
+  "cantidad_pedida": 60,
+  "codigo_proveedor": "RCH"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea8c"
+  },
+  "numero_pedido": "200346",
+  "nombre_medicamento": "Diclofenaco",
+  "cantidad_pedida": 35,
+  "codigo_proveedor": "RCH"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea8d"
+  },
+  "numero_pedido": "210345",
+  "nombre_medicamento": "Naproxeno",
+  "cantidad_pedida": 70,
+  "codigo_proveedor": "NVS"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea8e"
+  },
+  "numero_pedido": "210346",
+  "nombre_medicamento": "Naproxeno",
+  "cantidad_pedida": 40,
+  "codigo_proveedor": "NVS"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea8f"
+  },
+  "numero_pedido": "110235",
+  "nombre_medicamento": "Paracetamol",
+  "cantidad_pedida": 100,
+  "codigo_proveedor": "BYR"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea90"
+  },
+  "numero_pedido": "110236",
+  "nombre_medicamento": "Paracetamol",
+  "cantidad_pedida": 60,
+  "codigo_proveedor": "BYR"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea91"
+  },
+  "numero_pedido": "225345",
+  "nombre_medicamento": "Metamizol",
+  "cantidad_pedida": 80,
+  "codigo_proveedor": "SNF"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea92"
+  },
+  "numero_pedido": "225346",
+  "nombre_medicamento": "Metamizol",
+  "cantidad_pedida": 55,
+  "codigo_proveedor": "SNF"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea93"
+  },
+  "numero_pedido": "235345",
+  "nombre_medicamento": "Tramadol",
+  "cantidad_pedida": 30,
+  "codigo_proveedor": "GSK"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea94"
+  },
+  "numero_pedido": "235346",
+  "nombre_medicamento": "Tramadol",
+  "cantidad_pedida": 20,
+  "codigo_proveedor": "GSK"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea95"
+  },
+  "numero_pedido": "170891",
+  "nombre_medicamento": "Salbutamol",
+  "cantidad_pedida": 40,
+  "codigo_proveedor": "PFZ"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea96"
+  },
+  "numero_pedido": "170892",
+  "nombre_medicamento": "Salbutamol",
+  "cantidad_pedida": 25,
+  "codigo_proveedor": "PFZ"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea97"
+  },
+  "numero_pedido": "175345",
+  "nombre_medicamento": "Formoterol",
+  "cantidad_pedida": 50,
+  "codigo_proveedor": "RCH"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea98"
+  },
+  "numero_pedido": "175346",
+  "nombre_medicamento": "Formoterol",
+  "cantidad_pedida": 30,
+  "codigo_proveedor": "RCH"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea99"
+  },
+  "numero_pedido": "180345",
+  "nombre_medicamento": "Ipratropio",
+  "cantidad_pedida": 35,
+  "codigo_proveedor": "NVS"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea9a"
+  },
+  "numero_pedido": "180346",
+  "nombre_medicamento": "Ipratropio",
+  "cantidad_pedida": 20,
+  "codigo_proveedor": "NVS"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea9b"
+  },
+  "numero_pedido": "160789",
+  "nombre_medicamento": "Loratadina",
+  "cantidad_pedida": 80,
+  "codigo_proveedor": "BYR"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea9c"
+  },
+  "numero_pedido": "160790",
+  "nombre_medicamento": "Loratadina",
+  "cantidad_pedida": 50,
+  "codigo_proveedor": "BYR"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea9d"
+  },
+  "numero_pedido": "165345",
+  "nombre_medicamento": "Cetirizina",
+  "cantidad_pedida": 75,
+  "codigo_proveedor": "GSK"
+},
+{
+  "_id": {
+    "$oid": "681c70dc1a3100dc7b2eea9e"
+  },
+  "numero_pedido": "165346",
+  "nombre_medicamento": "Cetirizina",
+  "cantidad_pedida": 45,
+  "codigo_proveedor": "GSK"
+},
+{
+  "_id": {
+    "$oid": "6830a1f34681e97e365aa945"
+  },
+  "numero_pedido": "479921",
+  "nombre_medicamento": "Aspirina",
+  "cantidad_pedida": 20,
+  "codigo_proveedor": "SNF"
+},
+{
+  "_id": {
+    "$oid": "683d5de41304bf58e8107ef4"
+  },
+  "numero_pedido": "105261",
+  "nombre_medicamento": "Amoxicilina",
+  "cantidad_pedida": 25,
+  "codigo_proveedor": "SNF"
+}]

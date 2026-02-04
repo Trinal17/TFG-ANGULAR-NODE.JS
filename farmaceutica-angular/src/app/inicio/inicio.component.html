@@ -1,0 +1,17 @@
+<!-- src/app/landing/landing.component.html -->
+@if (!authStorage.isUserLoggedIn()) {
+  <div class="landing‐inner d-flex align-items-center justify-content-center w-100 mt-5" style="height: 600px;">
+    <div
+      class="text-center text-white p-5 bg-success bg-opacity-50 rounded-3"
+      style="background: url('/assets/hero-bg.jpg') center/cover no-repeat;"
+    >
+      <h1 class="display-3 fw-bold mb-3">Bienvenido a Gestión Farma</h1>
+      <p class="lead mb-4">
+        Controla tus pedidos y stocks de medicamentos de forma rápida y sencilla.
+      </p>
+      <button class="btn btn-lg btn-primary" (click)="goToLogin()">
+        Iniciar Sesión
+      </button>
+    </div>
+  </div>
+}

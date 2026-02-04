@@ -1,0 +1,192 @@
+[{
+  "_id": {
+    "$oid": "683701f634bb94edde96921e"
+  },
+  "codigo": "PFZ",
+  "nombre": "Laboratorios Pfizer",
+  "direccion": "Av. de la Industria, 45, Madrid",
+  "telefono": "+34 91 123 4567",
+  "email": "contacto@pfizer.com",
+  "pedidos": [
+    {
+      "numero_pedido": "100123",
+      "nombre_medicamento": "Ibuprofeno",
+      "cantidad_pedida": 50
+    },
+    {
+      "numero_pedido": "100124",
+      "nombre_medicamento": "Ibuprofeno",
+      "cantidad_pedida": 30
+    },
+    {
+      "numero_pedido": "170891",
+      "nombre_medicamento": "Salbutamol",
+      "cantidad_pedida": 40
+    },
+    {
+      "numero_pedido": "170892",
+      "nombre_medicamento": "Salbutamol",
+      "cantidad_pedida": 25
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683701f634bb94edde96921f"
+  },
+  "codigo": "RCH",
+  "nombre": "Laboratorios Roche",
+  "direccion": "C. de la Innovación, 12, Madrid",
+  "telefono": "+34 91 234 5678",
+  "email": "info@roche.com",
+  "pedidos": [
+    {
+      "numero_pedido": "200345",
+      "nombre_medicamento": "Diclofenaco",
+      "cantidad_pedida": 60
+    },
+    {
+      "numero_pedido": "200346",
+      "nombre_medicamento": "Diclofenaco",
+      "cantidad_pedida": 35
+    },
+    {
+      "numero_pedido": "175345",
+      "nombre_medicamento": "Formoterol",
+      "cantidad_pedida": 50
+    },
+    {
+      "numero_pedido": "175346",
+      "nombre_medicamento": "Formoterol",
+      "cantidad_pedida": 30
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683701f634bb94edde969220"
+  },
+  "codigo": "NVS",
+  "nombre": "Laboratorios Novartis",
+  "direccion": "P.º de la Salud, 3, Madrid",
+  "telefono": "+34 91 345 6789",
+  "email": "contact@novartis.com",
+  "pedidos": [
+    {
+      "numero_pedido": "210345",
+      "nombre_medicamento": "Naproxeno",
+      "cantidad_pedida": 70
+    },
+    {
+      "numero_pedido": "210346",
+      "nombre_medicamento": "Naproxeno",
+      "cantidad_pedida": 40
+    },
+    {
+      "numero_pedido": "180345",
+      "nombre_medicamento": "Ipratropio",
+      "cantidad_pedida": 35
+    },
+    {
+      "numero_pedido": "180346",
+      "nombre_medicamento": "Ipratropio",
+      "cantidad_pedida": 20
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683701f634bb94edde969221"
+  },
+  "codigo": "BYR",
+  "nombre": "Laboratorios Bayer",
+  "direccion": "C. Farmacéutica, 7, Madrid",
+  "telefono": "+34 91 456 7890",
+  "email": "soporte@bayer.com",
+  "pedidos": [
+    {
+      "numero_pedido": "110235",
+      "nombre_medicamento": "Paracetamol",
+      "cantidad_pedida": 100
+    },
+    {
+      "numero_pedido": "110236",
+      "nombre_medicamento": "Paracetamol",
+      "cantidad_pedida": 60
+    },
+    {
+      "numero_pedido": "160789",
+      "nombre_medicamento": "Loratadina",
+      "cantidad_pedida": 80
+    },
+    {
+      "numero_pedido": "160790",
+      "nombre_medicamento": "Loratadina",
+      "cantidad_pedida": 50
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683701f634bb94edde969222"
+  },
+  "codigo": "SNF",
+  "nombre": "Laboratorios Sanofi",
+  "direccion": "Av. de la Ciencia, 21, Madrid",
+  "telefono": "+34 91 567 8901",
+  "email": "contacto@sanofi.com",
+  "pedidos": [
+    {
+      "numero_pedido": "225345",
+      "nombre_medicamento": "Metamizol",
+      "cantidad_pedida": 80
+    },
+    {
+      "numero_pedido": "225346",
+      "nombre_medicamento": "Metamizol",
+      "cantidad_pedida": 55
+    },
+    {
+      "numero_pedido": "479921",
+      "nombre_medicamento": "Aspirina",
+      "cantidad_pedida": 20
+    },
+    {
+      "numero_pedido": "105261",
+      "nombre_medicamento": "Amoxicilina",
+      "cantidad_pedida": 25
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "683701f634bb94edde969223"
+  },
+  "codigo": "GSK",
+  "nombre": "Laboratorios GSK",
+  "direccion": "C. Salud y Bienestar, 9, Madrid",
+  "telefono": "+34 91 678 9012",
+  "email": "info@gsk.com",
+  "pedidos": [
+    {
+      "numero_pedido": "235345",
+      "nombre_medicamento": "Tramadol",
+      "cantidad_pedida": 30
+    },
+    {
+      "numero_pedido": "235346",
+      "nombre_medicamento": "Tramadol",
+      "cantidad_pedida": 20
+    },
+    {
+      "numero_pedido": "165345",
+      "nombre_medicamento": "Cetirizina",
+      "cantidad_pedida": 75
+    },
+    {
+      "numero_pedido": "165346",
+      "nombre_medicamento": "Cetirizina",
+      "cantidad_pedida": 45
+    }
+  ]
+}]

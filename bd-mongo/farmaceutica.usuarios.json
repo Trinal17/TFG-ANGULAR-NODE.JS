@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "68270757562bd68a3098cc2d"
+  },
+  "nombre": "Empleado",
+  "apellidos": "Invitado",
+  "correo": "empleado.invitado@farmaceutica.com",
+  "rol": "Empleado",
+  "password": "EmpleadoInvitado2025!"
+},
+{
+  "_id": {
+    "$oid": "68270757562bd68a3098cc2e"
+  },
+  "nombre": "María",
+  "apellidos": "López Martínez",
+  "correo": "maria.lopez@farmaceutica.com",
+  "rol": "Gerente",
+  "password": "MariaGerente#2025"
+}]

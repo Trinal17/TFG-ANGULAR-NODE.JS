@@ -1,0 +1,26 @@
+<div class="container login-container login-wrapper d-flex align-items-center justify-content-center mt-5" style="height: 600px;">
+  <div class="card shadow" style="max-width:400px; width:100%;">
+    <div class="card-body">
+      <h3 class="card-title text-center mb-4">Iniciar Sesión</h3>
+
+      @if (error()) {
+      <div class="alert alert-danger">{{ error() }}</div>
+      }
+
+      <div class="mb-3">
+        <label class="form-label">Correo</label>
+        <input type="email" class="form-control" [value]="email()" (input)="email.set($any($event.target).value)" />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Contraseña</label>
+        <input type="password" class="form-control" [value]="password()"
+          (input)="password.set($any($event.target).value)" />
+      </div>
+
+      <button class="btn btn-primary w-100" (click)="login()">
+        Entrar
+      </button>
+    </div>
+  </div>
+</div>

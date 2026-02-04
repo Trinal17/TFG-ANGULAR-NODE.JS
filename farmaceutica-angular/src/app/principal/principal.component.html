@@ -1,0 +1,51 @@
+<!-- src/app/principal/principal.component.html -->
+<div class="container py-4">
+  <h2 class="text-center mb-5">Panel Principal</h2>
+
+  <div class="row g-4 d-flex justify-content-center">
+    <!-- Tarjeta Medicamentos -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white position-relative h-100" role="button" (click)="goToMedicamentos()" style="background-color: rgb(40, 174, 54);">
+        <div class="card-body d-flex flex-column">
+          <!-- Icono + Título -->
+          <div class="d-flex align-items-center mb-auto">
+            <i class="bi bi-capsule fs-1"></i>
+            <h5 class="card-title ms-3 mb-0 fs-5">Medicamentos</h5>
+          </div>
+          <!-- Contador en esquina inferior derecha -->
+          <span class="position-absolute bottom-0 end-0 mb-2 me-3 fw-bold">
+            {{ medCount() }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta Pedidos -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white position-relative h-100" role="button" (click)="goToPedidos()" style="background-color: rgb(40, 174, 54);">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex align-items-center mb-auto">
+            <i class="bi bi-card-list fs-1"></i>
+            <h5 class="card-title ms-3 mb-0 fs-5">Pedidos</h5>
+          </div>
+          <span class="position-absolute bottom-0 end-0 mb-2 me-3 fw-bold">
+            {{ pedCount() }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta Horarios -->
+    @if (authStorage.getUser()?.['rol'] === 'Gerente') {
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white position-relative h-100" role="button" (click)="goToHorarios()" style="background-color: rgb(40, 174, 54);">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex align-items-center mb-auto">
+            <i class="bi bi-calendar fs-1"></i>
+            <h5 class="card-title ms-3 mb-0 fs-5">Horarios</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
